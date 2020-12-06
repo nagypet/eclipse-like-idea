@@ -10,3 +10,8 @@ Before:
 ![](https://github.com/nagypet/eclipse-like-idea/blob/main/docs/before.jpg)
 After:
 ![](https://github.com/nagypet/eclipse-like-idea/blob/main/docs/after.jpg)
+
+## Installation
+
+1. Download the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font and install all of them.
+1. Copy and overwrite all the *.prefs files from .metadata\.plugins\org.eclipse.core.runtime\.settings\ into your workspace.
