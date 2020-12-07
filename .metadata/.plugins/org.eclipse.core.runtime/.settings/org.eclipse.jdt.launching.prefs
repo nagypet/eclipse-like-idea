@@ -1,5 +1,0 @@
-eclipse.preferences.version=1
-org.eclipse.jdt.launching.PREF_CONNECT_TIMEOUT=20000
-org.eclipse.jdt.launching.PREF_DEFAULT_ENVIRONMENTS_XML=
-org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1607171555014" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1606996658340" name\="jre" path\="C\:\\Users\\NagyPeter\\AppData\\Local\\Temp\\eoi4E81.tmp\\plugins\\org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_14.0.2.v20200815-0932\\jre"/>\r\n        <vm id\="1607171555014" name\="jdk-11.0.9.101-hotspot" path\="C\:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot"/>\r\n    </vmType>\r\n</vmSettings>\r\n
-org.eclipse.jdt.launching.only_include_exported_classpath_entries=false

@@ -1,11 +1,1 @@
-arguments=
 auto.sync=true
-eclipse.preferences.version=1
-gradle.build.scans=false
-gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
-gradle.offline.mode=false
-gradle.user.home=C\:\\Users\\NagyPeter\\.gradle\\caches
-java.home=C\:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot
-jvm.arguments=
-show.console.view=true
-show.executions.view=true
