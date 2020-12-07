@@ -34,10 +34,13 @@ if (project.hasProperty('compileJava')) {
 /********************************************************************************************************
  * JDK > 1.8
  *******************************************************************************************************/
-if (project.hasProperty('compileJava')) {
-	compileJava {
-		options.compilerArgs << '--add-exports'
-		options.compilerArgs << 'java.base/sun.security.ssl=ALL-UNNAMED'
+if (project.hasProperty('java') && project.hasProperty('compileJava')) {
+	if (String.valueOf(targetCompatibility).compareTo("1.8") > 0) {
+		compileJava {
+			println('adding extra compiler options for javac > 1.8')
+			options.compilerArgs << '--add-exports'
+			options.compilerArgs << 'java.base/sun.security.ssl=ALL-UNNAMED'
+		}
 	}
 }
 

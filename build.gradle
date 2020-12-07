@@ -8,6 +8,7 @@
 plugins {
     id 'application'
 }
+sourceCompatibility = 1.8
 apply from: 'gradle/common.gradle'
 
 repositories {
@@ -25,8 +26,6 @@ application {
     applicationDefaultJvmArgs += ['-Xmx256m', '-Xms32m']
 }
 
-
-sourceCompatibility = 1.8
   
 dependencies {	
 	//compile project(':spvitamin-core')
@@ -43,3 +42,12 @@ dependencies {
     implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.30'    
     implementation('log4j:log4j:1.2.17')
 }
+
+
+task copyMetadata(type: Copy) {
+    group 'fmake'
+    from ".metadata"
+    into "${buildDir}/install/${project.name}/.metadata"
+}
+
+dist.finalizedBy copyMetadata

@@ -8,4 +8,4 @@
 include 'spvitamin-core'
 project(':spvitamin-core').projectDir = new File('../spvitamin-core')
 
-rootProject.name = 'pwdtool'
+rootProject.name = 'merge-prefs'
