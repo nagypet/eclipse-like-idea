@@ -11,19 +11,28 @@ import java.util.Map.Entry;
 import java.util.Properties;
 
 import hu.perit.spvitamin.core.StackTracer;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@RequiredArgsConstructor
 @Slf4j
 public class Merger {
 
 	private final File sourceFolder;
 	private final File targetFolder;
 
+	
+	public Merger(File sourceFolder, File targetFolder) throws IOException {
+		this.sourceFolder = sourceFolder.getCanonicalFile();
+		this.targetFolder = targetFolder.getCanonicalFile();
+	}
+
+
 	public void merge() {
-		log.debug(String.format("'%s' => '%s'", this.sourceFolder.getAbsolutePath(), this.targetFolder.getAbsolutePath()));
-		
+		log.debug(String.format("'%s' => '%s'", this.sourceFolder.getAbsoluteFile(), this.targetFolder.getAbsoluteFile()));
+		if (this.sourceFolder.equals(this.targetFolder)) {
+			log.error("Target and source folder are the same!");
+			return;
+		}
+				
 		try {
 			Files.walk(new File(this.sourceFolder, ".metadata").toPath())
 				.forEach(p -> this.mergeFile(this.sourceFolder.toPath().relativize(p)));
@@ -77,7 +86,7 @@ public class Merger {
 
 		if (changed) {
 			log.debug(String.format("Saving file '%s'", targetFile.getAbsolutePath()));
-			targetProperties.store(new FileOutputStream(targetFile), "changed by the tool merge-prefs");
+			targetProperties.store(new FileOutputStream(targetFile), "Updated with settings to be similar to IntelliJ IDEA. See https://github.com/nagypet/eclipse-like-idea.");
 		}
 	}
 }

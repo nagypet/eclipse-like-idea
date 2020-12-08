@@ -30,7 +30,7 @@ repositories {
 
 
 application {
-    mainClassName = 'hu.perit.crypto.Application'
+    mainClassName = 'hu.perit.eclipse.mergeprefs.Application'
     // Some JVM options already set in common.gradle
     applicationDefaultJvmArgs += ['-Xmx256m', '-Xms32m']
 }
@@ -56,7 +56,7 @@ dependencies {
 task copyMetadata(type: Copy) {
     group 'fmake'
     from ".metadata"
-    into "${buildDir}/install/${project.name}/.metadata"
+    into "${buildDir}/install/${project.name}/bin/.metadata"
 }
 
 dist.finalizedBy copyMetadata
