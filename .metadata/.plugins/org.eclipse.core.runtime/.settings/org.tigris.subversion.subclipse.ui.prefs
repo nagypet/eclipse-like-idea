@@ -1,0 +1,9 @@
+pref_filetext_decoration={name}
+pref_foldertext_decoration={external_flag}{name} 
+pref_projecttext_decoration={name}
+pref_show_added=false
+pref_show_external=false
+pref_show_hasremote=false
+pref_show_newresource=false
+pref_show_overlaydirty=false
+pref_use_font_decorators=true

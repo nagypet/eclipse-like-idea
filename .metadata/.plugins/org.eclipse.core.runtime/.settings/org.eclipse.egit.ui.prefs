@@ -1,11 +1,4 @@
-BranchProjectTracker__C\:\\svn\\ofmTraining_B211\\ofm-developer-training\\.git_andreeasauchea=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects>\r\n<project>\\ofm-developer-training-rbf-plus-api</project>\r\n<project>\\ofm-developer-training-rbf-plus-impl</project>\r\n<project>\\ofm-developer-training-rbf-plus-web</project>\r\n</projects>
-BranchProjectTracker__C\:\\svn\\ofmTraining_B211\\ofm-developer-training\\.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects>\r\n<project>\\ofm-developer-training-rbf-plus-api</project>\r\n<project>\\ofm-developer-training-rbf-plus-impl</project>\r\n<project>\\ofm-developer-training-rbf-plus-web</project>\r\n</projects>
-BranchProjectTracker__C\:\\svn\\ofmTraining_B211\\ofm-developer-training\\.git_peternagy=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<projects>\r\n<project>\\ofm-developer-training-rbf-plus-api</project>\r\n<project>\\ofm-developer-training-rbf-plus-impl</project>\r\n<project>\\ofm-developer-training-rbf-plus-web</project>\r\n</projects>
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>my first rbf-plus project</message>\r\n</messages>
 decorator_filetext_decoration={name}
 decorator_foldertext_decoration={name}
-decorator_projecttext_decoration={name} [{repository }{branch}{ branch_status}]
-decorator_submoduletext_decoration={name} [{branch}{ branch_status}]{ short_message}
-eclipse.preferences.version=1
-resourcehistory_graph_split=500,500
-resourcehistory_rev_split=492,505
+decorator_projecttext_decoration={name} [{repository}{branch}{branch_status}]
+decorator_submoduletext_decoration={name} [{branch}{branch_status}]{short_message}
