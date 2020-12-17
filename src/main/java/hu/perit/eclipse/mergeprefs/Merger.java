@@ -10,6 +10,8 @@ import java.nio.file.Path;
 import java.util.Map.Entry;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+
 import hu.perit.spvitamin.core.StackTracer;
 import lombok.extern.slf4j.Slf4j;
 
@@ -35,20 +37,20 @@ public class Merger {
 				
 		try {
 			Files.walk(new File(this.sourceFolder, ".metadata").toPath())
-				.forEach(p -> this.mergeFile(this.sourceFolder.toPath().relativize(p)));
+				.forEach(p -> this.processFile(this.sourceFolder.toPath().relativize(p)));
 		} catch (Exception ex) {
 			log.error(StackTracer.toString(ex));
 		}
 	}
 	
 	
-	private void mergeFile(Path relativePath) {
+	private void processFile(Path relativePath) {
 		try {
 			File sourceFile = new File(this.sourceFolder, relativePath.toString());
 			File targetFile = new File(this.targetFolder, relativePath.toString());
 			if (sourceFile.isFile() && sourceFile.exists()) {
 				if (!targetFile.exists()) {
-					log.warn(String.format("'%s' does not exist!", targetFile.getAbsolutePath()));
+					this.copyFile(sourceFile, targetFile);
 				} else {
 					this.mergeFiles(sourceFile, targetFile);
 				}
@@ -60,7 +62,7 @@ public class Merger {
 	
 	
 	private void mergeFiles(File sourceFile, File targetFile) throws FileNotFoundException, IOException {
-		log.debug(String.format("Processing file '%s'", targetFile.getAbsolutePath()));
+		log.debug(String.format("Merging file '%s'", targetFile.getAbsolutePath()));
 		Properties sourceProperties = new Properties();
 		sourceProperties.load(new FileInputStream(sourceFile));
 		
@@ -89,4 +91,12 @@ public class Merger {
 			targetProperties.store(new FileOutputStream(targetFile), "Updated with settings to be similar to IntelliJ IDEA. See https://github.com/nagypet/eclipse-like-idea.");
 		}
 	}
+	
+	
+	private void copyFile(File sourceFile, File targetFile) throws IOException {
+		log.debug(String.format("Copying file '%s'", targetFile.getAbsolutePath()));
+		
+		FileUtils.copyFile(sourceFile, targetFile);
+	}
 }
+
