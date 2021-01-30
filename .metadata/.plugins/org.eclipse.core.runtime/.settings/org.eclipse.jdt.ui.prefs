@@ -1,4 +1,4 @@
-content_assist_autoactivation_delay=40
+content_assist_autoactivation_delay=200
 content_assist_autoactivation_triggers_java=.abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ
 java_doc_default=128,128,128
 java_doc_default_italic=true
