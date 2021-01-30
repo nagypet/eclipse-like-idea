@@ -1,0 +1,4 @@
+decorator_filetext_decoration={name}
+decorator_foldertext_decoration={name}
+decorator_projecttext_decoration={name} [{repository}{branch}{branch_status}]
+decorator_submoduletext_decoration={name} [{branch}{branch_status}]{short_message}
